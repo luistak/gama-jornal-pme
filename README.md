@@ -19,3 +19,22 @@ Como compilar o sass:
     Passo 6 - Na linha de comando cole o trecho acima.
 
     E pronto o/ você já está assistindo a qualquer mudança nos arquivos de Sass.
+
+Como servir a aplicação local
+    Passo 1 - Abrir a pasta do repositório raiz
+
+    Passo 2 - Abrir o BASH na pasta
+
+    Passo 3 - Digitar o seguinte comando:
+        'firebase serve'
+
+    Passo 4 - Acesse a url: "localhost:5000" e você pode ver e ao salvar suas mudaças já afetará o código.
+
+Como fazer Deploy da aplicaçao em produção
+    Passo 1 - Abrir a pasta do repositório raiz
+
+    Passo 2 - Abrir o BASH na pasta
+
+    Passo 3 - Digitar o seguinte comando:
+        'firebase deploy'
+        E pronto assim que acabar de rodar o comando suas alterações estarão no ar.
