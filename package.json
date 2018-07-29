@@ -1,0 +1,29 @@
+{
+  "name": "jornal-pme-gama-xp13",
+  "version": "1.0.0",
+  "description": "Assignment #2: Show me the leads!",
+  "main": "/javascript/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luistak/gama-jornal-pme.git"
+  },
+  "keywords": [
+    "gama",
+    "xp13",
+    "pme"
+  ],
+  "author": "Team Black Gama Xp13",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luistak/gama-jornal-pme/issues"
+  },
+  "homepage": "https://github.com/luistak/gama-jornal-pme#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1",
+    "popper": "^1.0.1"
+  }
+}
