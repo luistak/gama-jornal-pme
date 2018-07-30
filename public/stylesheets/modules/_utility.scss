@@ -1,1 +1,11 @@
 // Utility variables
+.dark-blue-bg {
+    color: $light-font-color;
+    background-color: $dark-color;
+}
+
+%responsive-flex {
+    @media (max-width: 991px) {
+        flex-direction: column;
+    }
+}

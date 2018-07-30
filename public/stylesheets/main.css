@@ -1,12 +1,47 @@
 @import "vendor/bootstrap.min.css";
+.dark-blue-bg {
+  color: #fff;
+  background-color: #0d2435;
+}
+
+@media (max-width: 991px) {
+  header .head, .newsletter .content {
+    flex-direction: column;
+  }
+}
+
 .button {
   background-color: #e8e8e8;
   color: #8a8a8a;
 }
 
-.blue-div {
-  background: #50d3a1;
-  color: white;
+.btn-light {
+  color: #fff;
+  background-color: #2abbec;
+}
+.btn-light :hover {
+  background-color: #18a8de;
+}
+
+.newsletter .text {
+  max-width: 65%;
+}
+.newsletter .text span {
+  font-size: 1.5rem;
+}
+.newsletter .content {
+  max-width: 600px;
+}
+
+header {
+  background-color: #fff;
+  min-height: 100px;
+}
+header .logo {
+  max-width: 15rem;
+}
+header .head {
+  display: flex;
 }
 
 .blog-footer {
@@ -15,6 +50,16 @@
   text-align: center;
   background-color: #f9f9f9;
   border-top: 0.05rem solid #e5e5e5;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+main {
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

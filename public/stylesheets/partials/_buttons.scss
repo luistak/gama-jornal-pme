@@ -3,3 +3,11 @@
     background-color: $color-btn;
     color: #8a8a8a;
 }
+
+.btn-light {
+    color: $light-font-color;
+    background-color: $light-color;
+    :hover {
+        background-color: $color;
+    }
+}

@@ -9,8 +9,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+		<!-- Favicon -->
+		<link rel="icon" href="img/favicon.png" />
+
 		<!-- Main CSS -->
-		<link rel="stylesheet" href="stylesheets/main.css">
+		<link rel="stylesheet" href="stylesheets/main.css" data-main-css>
 
 		<title>Jornal pequenas e médias empresas</title>
 		<!-- update the version number as needed -->
@@ -26,40 +29,36 @@
 	<body>
 		<header>
 			<div class="container">
-				<div class="row flex-nowrap justify-content-between align-items-center">
-					<div class="col-4 pt-1 h-25">
-						<a class="text-muted ml-3" href="#"><img src="/img/logo.png" alt="Logo Jornal PME"> </a>
+				<div class="head flex-nowrap justify-content-between align-items-center p-3">
+					<div class="logo">
+						<a class="d-block" href="/"><img src="img/logo.png" class="img-fluid" alt="Logo Jornal PME"> </a>
 					</div>
-					<div class="col-4 text-center">
-						<!-- Talvez tentra algo aqui -->
-					</div>
-					<div class="col-4 d-flex justify-content-end align-items-center">
-						<form class="" name="formsearch" method="post" action>
+					<div class="justify-content-end align-items-center">
+						<form class="search" name="formsearch" action>
 							<input type="search" name="busca" id="busca" placeholder="Palavras-chave">
 							<a class="button mr-3" href="#">Pesquisar</a>
 						</form>
-						
 					</div>
-				</div>
-				<div class="nav-scroller py-1 mb-2">
-					<nav class="nav d-flex justify-content-between">
-						<a class="p-2 text-muted" href="#">World</a>
-						<a class="p-2 text-muted" href="#">U.S.</a>
-						<a class="p-2 text-muted" href="#">Technology</a>
-						<a class="p-2 text-muted" href="#">Design</a>
-						<a class="p-2 text-muted" href="#">Culture</a>
-						<a class="p-2 text-muted" href="#">Business</a>
-						<a class="p-2 text-muted" href="#">Politics</a>
-						<a class="p-2 text-muted" href="#">Opinion</a>
-						<a class="p-2 text-muted" href="#">Science</a>
-						<a class="p-2 text-muted" href="#">Health</a>
-						<a class="p-2 text-muted" href="#">Style</a>
-						<a class="p-2 text-muted" href="#">Travel</a>
-					</nav>
 				</div>
 			</div>
 		</header>
+		<section class="newsletter dark-blue-bg d-flex justify-content-center py-5">
+			<div class="d-flex justify-content-between align-items-center content">
+				<div class="text text-center">
+					<span>Assine nossa newsletter</span> para receber atualizações, artigos e dicas importantes
+				</div>
+				<button class="btn btn-light">
+					Cadastrar
+				</button>
+			</div>
+		</section>
 		<main role="main" class="container">
+			<div class="full-banner">
+				<img src="img/banner.png" class="img-fluid" alt="Post: Eu essa semana">
+				<div>
+					<label>Título bacana</label>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-md-8 blog-main">
 					<h3 class="pb-3 mb-4 font-italic border-bottom">

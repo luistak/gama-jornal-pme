@@ -11,6 +11,7 @@ gama.firebaseConfig = {
 
 gama.initialize = function() {
     gama.initializeApp();
+    gama.versionateCss();
 }
 
 gama.initializeApp = function () {
@@ -19,14 +20,23 @@ gama.initializeApp = function () {
     }
 }
 
+gama.versionateCss = function () {
+    var mainCss = $('[data-main-css]');
+    var actualLink = mainCss.attr('href');
+
+    var versionatedLink = actualLink + '?v=' + Date.now();
+    mainCss.attr('href', versionatedLink);
+}
+
 $(function() {
     gama.initialize();
 });
 
-firebase.database().ref('leads/').set({
-    nome: 'Luis Takahashi',
-    email: 'takahashihideki408@gmail.com',
-    ip: '186.220.34.138',
-    tipo: 'B2B',
-    data_hora: '2018-07-27 20:57:00'
-});
+// Tests
+// firebase.database().ref('leads/').set({
+//     nome: 'Luis Takahashi',
+//     email: 'takahashihideki408@gmail.com',
+//     ip: '186.220.34.138',
+//     tipo: 'B2B',
+//     data_hora: '2018-07-27 20:57:00'
+// });
