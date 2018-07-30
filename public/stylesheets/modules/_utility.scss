@@ -4,6 +4,10 @@
     background-color: $dark-color;
 }
 
+.no-box-shadow {
+    box-shadow: none !important;
+}
+
 %responsive-flex {
     @media (max-width: 991px) {
         flex-direction: column;

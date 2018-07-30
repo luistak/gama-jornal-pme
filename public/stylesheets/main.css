@@ -4,6 +4,10 @@
   background-color: #0d2435;
 }
 
+.no-box-shadow, .form-control {
+  box-shadow: none !important;
+}
+
 @media (max-width: 991px) {
   header .head, .newsletter .content {
     flex-direction: column;
@@ -60,6 +64,17 @@ body {
 
 main {
   background-color: #fff;
+}
+
+.form-group label.error {
+  color: #ff0000b3;
+}
+
+.form-control.error {
+  border-left: 3px solid #f00;
+}
+.form-control.valid {
+  border-left: 3px solid #009200;
 }
 
 /*# sourceMappingURL=main.css.map */
