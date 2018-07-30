@@ -94,10 +94,16 @@ gamaData.formListener = function () {
             if (response) {
                 // Success
                 console.log('Inseriu no banco com sucesso')
+                alert('Inscrito com sucesso na newsletter! Yay o/');
+
+                gama.closeModal();
                 $(this).off('push-response');
             } else {
                 // Error
                 console.error('Houve algum erro')
+                alert('Oops, houve algum erro, por favor tente mais tarde :(');
+
+                gama.closeModal();
                 $(this).off('push-response');
             }
         });

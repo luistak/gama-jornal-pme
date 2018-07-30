@@ -57,6 +57,10 @@ gama.setUserIp = function () {
     });
 }
 
+gama.closeModal = function () {
+    $('.modal.fade').modal('hide');
+}
+
 $(function() {
     gama.setUserIp();
 });
