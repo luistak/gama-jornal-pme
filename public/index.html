@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Main CSS -->
-		<link rel="stylesheet" href="../stylesheets/main.css">
+		<link rel="stylesheet" href="stylesheets/main.css">
 
 		<title>Jornal pequenas e médias empresas</title>
 		<!-- update the version number as needed -->
@@ -172,30 +172,15 @@
 			</p>
 		</footer>
 		<!-- Javascript -->
-			<script>
-			document.addEventListener('DOMContentLoaded', function() {
-				// // The Firebase SDK is initialized and available here!
-				//
-				// firebase.auth().onAuthStateChanged(user => { });
-				// firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-				// firebase.messaging().requestPermission().then(() => { });
-				// firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-
-				try {
-				let app = firebase.app();
-				let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-				document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-				} catch (e) {
-				console.error(e);
-				document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-				}
-			});
-			</script>
+			<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
 			<!-- Optional JavaScript -->
 			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-			<script src="../javascript/jquery.min.js"></script>
-			<script src="../javascript/popper.js"></script>
-			<script src="../javascript/bootstrap.min.js"></script>
+			<script src="javascript/jquery.min.js"></script>
+			<script src="javascript/popper.min.js"></script>
+			<script src="javascript/bootstrap.min.js"></script>
+
+			<!-- Main Javascritp -->
+			<script src="javascript/index.js"></script>
 		<!--/ Javascript -->
 	</body>
 </html>
