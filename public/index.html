@@ -13,7 +13,7 @@
 		<link rel="icon" href="img/favicon.png" />
 
 		<!-- Main CSS -->
-		<link rel="stylesheet" href="stylesheets/main.css" data-main-css>
+		<link rel="stylesheet" href="stylesheets/main.css?v=1">
 
 		<title>Jornal pequenas e médias empresas</title>
 		<!-- update the version number as needed -->
@@ -25,6 +25,16 @@
 		<script defer src="/__/firebase/5.3.0/firebase-storage.js"></script>
 		<!-- initialize the SDK after all desired features are loaded -->
 		<script defer src="/__/firebase/init.js"></script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123043970-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-123043970-1');
+		</script>
 	</head>
 	<body>
 		<header>
@@ -47,7 +57,7 @@
 				<div class="text text-center">
 					<span>Assine nossa newsletter</span> para receber atualizações, artigos e dicas importantes
 				</div>
-				<button class="btn btn-light">
+				<button class="btn btn-primary btn-light" type="button" data-toggle="modal" data-target="#exampleModal">
 					Cadastrar
 				</button>
 			</div>
@@ -61,6 +71,20 @@
 			</div>
 			<div class="row">
 				<div class="col-md-8 blog-main">
+					<div class="gama-form">
+						<form data-gama-form>
+							<div class="form-group">
+								<label for="emailInput">Nome</label>
+								<input type="text" class="form-control" id="emailInput" placeholder="Nome">
+							</div>
+							<div class="form-group">
+								<label for="email">Email</label>
+								<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+								<small id="emailHelp" class="form-text text-muted">Digite aqui o seu email corporativo.</small>
+							</div>
+							<button type="submit" class="btn btn-primary">Cadastrar</button>
+						</form>
+					</div>
 					<h3 class="pb-3 mb-4 font-italic border-bottom">
 					From the Firehose
 					</h3>
@@ -164,6 +188,26 @@
 				</aside>
 			</div>
 		</main>
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Mensagem teste bacana
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Não quero receber um conteúdo incrível</button>
+					<button type="button" class="btn btn-primary">Cadastrar</button>
+				</div>
+				</div>
+			</div>
+		</div>
 		<footer class="blog-footer mt-2">
 			<p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
 			<p>
@@ -174,12 +218,15 @@
 			<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
 			<!-- Optional JavaScript -->
 			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-			<script src="javascript/jquery.min.js"></script>
-			<script src="javascript/popper.min.js"></script>
-			<script src="javascript/bootstrap.min.js"></script>
+			<script src="javascript/libs/jquery.min.js"></script>
+			<script src="javascript/libs/popper.min.js"></script>
+			<script src="javascript/libs/bootstrap.min.js"></script>
+			<script src="javascript/libs/moment.min.js"></script>
+			<script src="javascript/libs/jquery.validate.min.js"></script>
 
-			<!-- Main Javascritp -->
+			<!-- Main Javascript -->
 			<script src="javascript/index.js"></script>
+			<script src="javascript/data.js"></script>
 		<!--/ Javascript -->
 	</body>
 </html>

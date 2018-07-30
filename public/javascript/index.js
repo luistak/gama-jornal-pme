@@ -1,42 +1,48 @@
 var gama = [];
 
-gama.firebaseConfig = {
-    apiKey: "AIzaSyDQy4_O7bKkNaq3prkpd-bz8EALeREk_Gw",
-    authDomain: "gama-jornal-pme.firebaseapp.com",
-    databaseURL: "https://gama-jornal-pme.firebaseio.com",
-    projectId: "gama-jornal-pme",
-    storageBucket: "gama-jornal-pme.appspot.com",
-    messagingSenderId: "961147787327"
-};
 
 gama.initialize = function() {
-    gama.initializeApp();
-    gama.versionateCss();
-}
 
-gama.initializeApp = function () {
-    if (!firebase.apps.length) {
-        firebase.initializeApp(gama.firebaseConfig);
+}
+/**
+ * Function get the actual user ip address
+ * @param Object - Callback object to be handled
+ * @example 
+ *  gama.getIp(function (ip) {
+ *      console.log(ip);
+ *  })
+ */
+gama.getIp = function (callback) {
+    function response(s) {
+        callback(window.userip);
+
+        s.onload = s.onerror = null;
+        document.body.removeChild(s);
     }
-}
 
-gama.versionateCss = function () {
-    var mainCss = $('[data-main-css]');
-    var actualLink = mainCss.attr('href');
+    function trigger() {
+        window.userip = false;
 
-    var versionatedLink = actualLink + '?v=' + Date.now();
-    mainCss.attr('href', versionatedLink);
+        var s = document.createElement("script");
+        s.async = true;
+        s.onload = function() {
+            response(s);
+        };
+        s.onerror = function() {
+            response(s);
+        };
+
+        s.src = "https://l2.io/ip.js?var=userip";
+        document.body.appendChild(s);
+    }
+
+    if (/^(interactive|complete)$/i.test(document.readyState)) {
+        trigger();
+    } else {
+        document.addEventListener('DOMContentLoaded', trigger);
+    }
 }
 
 $(function() {
     gama.initialize();
 });
-
-// Tests
-// firebase.database().ref('leads/').set({
-//     nome: 'Luis Takahashi',
-//     email: 'takahashihideki408@gmail.com',
-//     ip: '186.220.34.138',
-//     tipo: 'B2B',
-//     data_hora: '2018-07-27 20:57:00'
-// });
