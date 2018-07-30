@@ -1,9 +1,7 @@
 var gama = [];
 
+gama.userIp = '127.0.0.1';
 
-gama.initialize = function() {
-
-}
 /**
  * Function get the actual user ip address
  * @param Object - Callback object to be handled
@@ -43,6 +41,22 @@ gama.getIp = function (callback) {
     }
 }
 
+/**
+ * Return actual date
+ * @return {string} - Actual date formatted on 'YYYY-MM-DD hh:mm:ss'
+ */
+gama.now = function () {
+    return moment().format('YYYY-MM-DD hh:mm:ss');
+}
+
+gama.setUserIp = function () {
+    $(document).trigger('ip-loading');
+    gama.getIp(function (ip) {
+        $(document).trigger('ip-loaded');
+        gama.userIp = ip;
+    });
+}
+
 $(function() {
-    gama.initialize();
+    gama.setUserIp();
 });
