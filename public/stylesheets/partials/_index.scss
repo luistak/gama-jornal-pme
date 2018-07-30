@@ -1,6 +1,13 @@
 // Styles for index page
-
-.blue-div {
-    background: $color;
-    color: white;
+.newsletter {
+    .text {
+        max-width: 65%;
+        span {
+            font-size: 1.5rem;
+        }
+    }
+    .content {
+        max-width: 600px;
+        @extend %responsive-flex;
+    }
 }

@@ -1,0 +1,12 @@
+// Header styles
+header {
+    background-color: $background;
+    min-height: 100px;
+    .logo {
+        max-width: 15rem;
+    }
+    .head {
+        display: flex;
+        @extend %responsive-flex;
+    }
+}
