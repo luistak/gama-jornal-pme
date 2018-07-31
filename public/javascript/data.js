@@ -18,6 +18,7 @@ gamaData.initialize = function() {
         gamaData.initializeApp();
         gamaData.setCustomValidation();
         gamaData.formListener();
+        gamaData.formModalListener();
         gamaData.databaseSetup();
     });
 }
@@ -38,6 +39,7 @@ gamaData.databaseSetup = function () {
 
 gamaData.formListener = function () {
     var form = $(gamaData.formSelector);
+
     form.validate({
         rules: {
             email: {
@@ -48,9 +50,9 @@ gamaData.formListener = function () {
                 required: true,
                 minlength: 3
             },
-            cargo: {
+            empresa: {
                 required: true,
-                minlength: 3
+                minlength: 4
             }
         },
         messages: {
@@ -64,10 +66,10 @@ gamaData.formListener = function () {
                 minlength: "Seu nome deve ter no mínimo 3 caracteres",
                 nome: "Digite seu nome para finalizar"
             },
-            cargo: {
-                required: "Digite seu cargo para finalizar",
-                minlength: "Seu cargo deve ter no mínimo 3 caracteres",
-                cargo: "Digite seu cargo para finalizar"
+            empresa: {
+                required: "Digite seu empresa para finalizar",
+                minlength: "Seu empresa deve ter no mínimo 4 caracteres",
+                empresa: "Digite seu empresa para finalizar"
             },
         },
     });
@@ -75,19 +77,96 @@ gamaData.formListener = function () {
     $(document).on('submit', gamaData.formSelector, function (event) {
         event.preventDefault();
         var formData = $(this).serializeArray();
-        var nome, cargo, email;
+        var nome, empresa, email;
 
         formData.forEach(function (data) {
             if (data.name == 'nome') {
                 nome = data.value;
-            } else if (data.name == 'cargo') {
-                cargo = data.value;
+            } else if (data.name == 'empresa') {
+                empresa = data.value;
             } else if (data.name == 'email') {
                 email = data.value;
             }
         });
 
-        var Lead = gamaData.formatLead(nome, cargo, email);
+        var Lead = gamaData.formatLead(nome, empresa, email);
+        gamaData.pushLead(Lead);
+
+        $(document).on('push-response', function (response) {
+            if (response) {
+                // Success
+                console.log('Inseriu no banco com sucesso')
+                alert('Inscrito com sucesso na newsletter! Yay o/');
+                window.location.href = 'includes/ebook.pdf';
+
+                gama.closeModal();
+                $(this).off('push-response');
+            } else {
+                // Error
+                console.error('Houve algum erro')
+                alert('Oops, houve algum erro, por favor tente mais tarde :(');
+
+                gama.closeModal();
+                $(this).off('push-response');
+            }
+        });
+    });
+}
+
+gamaData.formModalListener = function () {
+    var selector = '[data-gama-modal-form]';
+    var form = $(selector);
+
+    form.validate({
+        rules: {
+            email: {
+                required: true,
+                regx: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+            },
+            nome: {
+                required: true,
+                minlength: 3
+            },
+            empresa: {
+                required: true,
+                minlength: 4
+            }
+        },
+        messages: {
+            email: {
+                required: "Digite seu e-mail para finalizar",
+                regx: "Seu email deve estar no formato nome@dominio.com",
+                email: "Digite seu e-mail para finalizar"
+            },
+            nome: {
+                required: "Digite seu nome para finalizar",
+                minlength: "Seu nome deve ter no mínimo 3 caracteres",
+                nome: "Digite seu nome para finalizar"
+            },
+            empresa: {
+                required: "Digite seu empresa para finalizar",
+                minlength: "Seu empresa deve ter no mínimo 4 caracteres",
+                empresa: "Digite seu empresa para finalizar"
+            },
+        },
+    });
+
+    $(document).on('submit', selector, function (event) {
+        event.preventDefault();
+        var formData = $(this).serializeArray();
+        var nome, empresa, email;
+
+        formData.forEach(function (data) {
+            if (data.name == 'nome') {
+                nome = data.value;
+            } else if (data.name == 'empresa') {
+                empresa = data.value;
+            } else if (data.name == 'email') {
+                email = data.value;
+            }
+        });
+
+        var Lead = gamaData.formatLead(nome, empresa, email);
         gamaData.pushLead(Lead);
 
         $(document).on('push-response', function (response) {
@@ -110,14 +189,14 @@ gamaData.formListener = function () {
     });
 }
 
-gamaData.formatLead = function (nome, cargo, email) {
+gamaData.formatLead = function (nome, empresa, email) {
     nome = nome || 'Empresa Padrão';
-    cargo = cargo || 'CEO';
+    empresa = empresa || 'CEO';
     email = email || 'contato@empresa-padrao.com.br';
 
     var Lead = {
         nome: nome,
-        cargo: cargo,
+        empresa: empresa,
         email: email,
         ip: gama.userIp,
         data_hora: gama.now(),

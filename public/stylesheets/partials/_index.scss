@@ -11,3 +11,24 @@
         @extend %responsive-flex;
     }
 }
+
+.banner {
+    position: relative;
+    .ban-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem 3rem;
+        background: rgba(0, 0, 0,0.5);
+        color: #fff;
+        font-size: 2rem;
+        @media (max-width: 991px) {
+            font-size: 1rem;
+        }
+    }
+}
+
+.card-body {
+    background-color: $gray;
+}

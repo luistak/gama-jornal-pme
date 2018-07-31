@@ -11,3 +11,9 @@
         background-color: $color;
     }
 }
+
+.btn-gold {
+    color: $light-font-color;
+    background-color: $gold !important;
+    @extend .no-border;
+}
