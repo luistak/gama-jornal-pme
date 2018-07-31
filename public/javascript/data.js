@@ -20,6 +20,7 @@ gamaData.leadFormOptions = {
 		},
 		nome: {
 			required: true,
+			regx: /^[a-zA-ZáÁéÉ][a-zA-ZáÁéÉ]+([ ][a-zA-ZáÁéÉ]+)*([ ][a-zA-ZáÁéÉ][a-zA-ZáÁéÉ]+)+([ ][a-zA-ZáÁéÉ]+)*$/,
 			minlength: 3
 		},
 		empresa: {
@@ -35,6 +36,7 @@ gamaData.leadFormOptions = {
 		},
 		nome: {
 			required: "Digite seu nome para finalizar",
+			regx: "Seu nome deve conter no mínimo 2 palavras, e não deve conter caracteres especiais",
 			minlength: "Seu nome deve ter no mínimo 3 caracteres",
 			nome: "Digite seu nome para finalizar"
 		},
@@ -69,7 +71,6 @@ gamaData.databaseSetup = function () {
 }
 
 gamaData.indexFormsListeners = function () {
-	console.log('Começou o listener de forms');
 	// Footer Form
 	var footerForm = $(gamaData.formSelector);
 	footerForm.validate(gamaData.leadFormOptions);

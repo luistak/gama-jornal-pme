@@ -21,7 +21,7 @@
 }
 
 @media (max-width: 991px) {
-  footer .content, header .head, .newsletter .content {
+  footer .content, header .head, .newsletter form, .newsletter .content {
     flex-direction: column;
   }
 }

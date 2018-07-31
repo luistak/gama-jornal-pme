@@ -10,6 +10,9 @@
         max-width: 1000px;
         @extend %responsive-flex;
     }
+    form {
+        @extend %responsive-flex;
+    }
     .form-control {
         border-radius: 0;
         border: 3px solid $light-color;
