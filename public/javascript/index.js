@@ -61,6 +61,24 @@ gama.closeModal = function () {
     $('.modal.fade').modal('hide');
 }
 
+gama.isPostPage = function() {
+	var path = window.location.pathname;
+
+	if (/\/(posts)\/.*/i.test(path)) {
+		return true;
+	}
+
+	return false;
+}
+
+gama.redirect = function (url) {
+	window.location = url;
+}
+
+gama.getBaseUrl = function () {
+	return window.location.protocol + "//" + window.location.host;
+}
+
 $(function() {
     gama.setUserIp();
 });
