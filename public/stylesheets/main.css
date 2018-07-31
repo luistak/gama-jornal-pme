@@ -37,6 +37,20 @@
   max-width: 600px;
 }
 
+.banner {
+  position: relative;
+}
+.banner .ban-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 2rem;
+}
+
 header {
   background-color: #fff;
   min-height: 100px;
@@ -48,12 +62,9 @@ header .head {
   display: flex;
 }
 
-.blog-footer {
+footer {
   padding: 2.7rem 0;
-  color: #999;
   text-align: center;
-  background-color: #f9f9f9;
-  border-top: 0.05rem solid #e5e5e5;
 }
 
 body {
