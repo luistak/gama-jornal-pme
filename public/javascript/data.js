@@ -20,10 +20,11 @@ gamaData.leadFormOptions = {
 		},
 		nome: {
 			required: true,
+			regx: /^[a-zA-ZáÁéÉ][a-zA-ZáÁéÉ]+([ ][a-zA-ZáÁéÉ]+)*([ ][a-zA-ZáÁéÉ][a-zA-ZáÁéÉ]+)+([ ][a-zA-ZáÁéÉ]+)*$/,
 			minlength: 3
 		},
 		empresa: {
-			required: true,
+			required: false,
 			minlength: 4
 		}
 	},
@@ -35,11 +36,11 @@ gamaData.leadFormOptions = {
 		},
 		nome: {
 			required: "Digite seu nome para finalizar",
+			regx: "Seu nome deve conter no mínimo 2 palavras, e não deve conter caracteres especiais",
 			minlength: "Seu nome deve ter no mínimo 3 caracteres",
 			nome: "Digite seu nome para finalizar"
 		},
 		empresa: {
-			required: "Digite seu empresa para finalizar",
 			minlength: "Seu empresa deve ter no mínimo 4 caracteres",
 			empresa: "Digite seu empresa para finalizar"
 		},
@@ -70,7 +71,6 @@ gamaData.databaseSetup = function () {
 }
 
 gamaData.indexFormsListeners = function () {
-	console.log('Começou o listener de forms');
 	// Footer Form
 	var footerForm = $(gamaData.formSelector);
 	footerForm.validate(gamaData.leadFormOptions);
@@ -96,21 +96,19 @@ gamaData.indexFormsListeners = function () {
 		$(document).on('push-response', function (response) {
 			if (response) {
 				// Success
-				console.log('Inseriu no banco com sucesso')
-				alert('Inscrito com sucesso na newsletter! Yay o/');
-
 				var eBookLink = gama.getBaseUrl() + '/includes/ebook.pdf'
+				$('form').trigger('reset');
 				gama.redirect(eBookLink);
+				alert('Você foi inscrito com sucesso!');
 				
 				gama.closeModal();
 				$(this).off('push-response');
 			} else {
 				// Error
-				console.error('Houve algum erro')
-				alert('Oops, houve algum erro, por favor tente mais tarde :(');
-
-				gama.closeModal();
+				
+								gama.closeModal();
 				$(this).off('push-response');
+				alert('Oops, houve algum erro, por favor tente mais tarde :(');
 			}
 		});
 	});
@@ -141,27 +139,65 @@ gamaData.indexFormsListeners = function () {
 		$(document).on('push-response', function (response) {
 			if (response) {
 				// Success
-				console.log('Inseriu no banco com sucesso')
-				alert('Inscrito com sucesso na newsletter! Yay o/');
-
 				gama.closeModal();
+				$('form').trigger('reset');
 				$(this).off('push-response');
+				alert('Você foi inscrito com sucesso!');
 			} else {
 				// Error
-				console.error('Houve algum erro')
-				alert('Oops, houve algum erro, por favor tente mais tarde :(');
-
 				gama.closeModal();
+				$('form').trigger('reset');
 				$(this).off('push-response');
+				alert('Oops, houve algum erro, por favor tente mais tarde :(');
+			}
+		});
+	});
+
+	// News form
+	var newsSelector = '[data-gama-news-form]';
+	var newsForm = $(newsSelector);
+	newsForm.validate(gamaData.leadFormOptions);
+
+	$(document).on('submit', newsSelector, function (event) {
+		event.preventDefault();
+		var formData = $(this).serializeArray();
+		var nome, empresa, email;
+
+		formData.forEach(function (data) {
+			if (data.name == 'nome') {
+				nome = data.value;
+			} else if (data.name == 'empresa') {
+				empresa = data.value;
+			} else if (data.name == 'email') {
+				email = data.value;
+			}
+		});
+
+		var Lead = gamaData.formatLead(nome, empresa, email);
+		gamaData.pushLead(Lead);
+
+		$(document).on('push-response', function (response) {
+			if (response) {
+				// Success
+				gama.closeModal();
+				$('form').trigger('reset');
+				$(this).off('push-response');
+				alert('Você foi inscrito com sucesso!');
+			} else {
+				// Error
+				gama.closeModal();
+				$('form').trigger('reset');
+				$(this).off('push-response');
+				alert('Oops, houve algum erro, por favor tente mais tarde :(');
 			}
 		});
 	});
 }
 
 gamaData.formatLead = function (nome, empresa, email) {
-	nome = nome || 'Empresa Padrão';
-	empresa = empresa || 'CEO';
-	email = email || 'contato@empresa-padrao.com.br';
+	nome = nome || '-';
+	empresa = empresa || '-';
+	email = email || '-';
 
 	var Lead = {
 		nome: nome,

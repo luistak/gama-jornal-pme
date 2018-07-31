@@ -10,6 +10,7 @@ footer {
         border: 3px solid $gold;
         border-radius: 0;
         background-color: transparent !important;
-        color: #fff !important;
+        color: $light-font-color;
+        @include placeholder-color ($light-font-color);
     }
 }
