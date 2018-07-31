@@ -8,3 +8,11 @@ body {
 main {
     background-color: $background;
 }
+
+a {
+    color: $font-color;
+    margin: 0 auto;
+    &:hover {
+        color: $font-color;
+    }
+}
