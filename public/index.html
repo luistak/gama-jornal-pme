@@ -53,9 +53,15 @@
 				<div class="text text-center">
 					<span>Assine nossa newsletter</span> para receber atualizações, artigos e dicas importantes
 				</div>
-				<button class="btn btn-primary btn-light" type="button" data-toggle="modal" data-target="#exampleModal">
-					Cadastrar
-				</button>
+				<div class="gama-form">
+					<form data-gama-news-form class="d-flex justify-content-between align-items-center">
+						<div class="form-group">
+							<input type="text" class="form-control mb-3" id="nome" placeholder="Nome e sobrenome" name="nome" required>
+							<input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email corporativo"  required>
+						</div>
+						<button type="submit" class="ml-3 mb-3 btn btn-light no-border no-radius">Cadastrar</button>
+					</form>
+				</div>
 			</div>
 		</section>
 		<main role="main" class="container">
@@ -144,7 +150,7 @@
 					<form data-gama-modal-form>
 						<div class="modal-body">
 							<div class="form-group">
-								<label for="nome" class="required">Nome</label>
+								<label for="nome" class="required">Nome completo</label>
 								<input type="text" class="form-control" id="nome" placeholder="Nome e sobrenome" name="nome" required>
 							</div>
 							<div class="form-group">
@@ -182,7 +188,7 @@
 							<div class="form-group">
 								<input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email corporativo"  required>
 							</div>
-							<button type="submit" class="btn btn-gold no-border">Cadastrar</button>
+							<button type="submit" class="btn btn-gold no-border no-radius">Cadastrar</button>
 					</form>
 				</div>
 			</div>

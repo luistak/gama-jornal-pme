@@ -1,8 +1,4 @@
 @import "vendor/bootstrap.min.css";
-ol, ul {
-	list-style: none;
-}
-
 .dark-blue-bg {
   color: #fff;
   background-color: #0d2435;
@@ -14,6 +10,10 @@ ol, ul {
 
 .no-border, .btn-gold {
   border: none !important;
+}
+
+.no-radius {
+  border-radius: 0;
 }
 
 .light-blue-text {
@@ -40,7 +40,7 @@ ol, ul {
 }
 
 .btn-gold {
-  color: #fff;
+  color: #0d2435;
   background-color: #ffe587 !important;
 }
 
@@ -51,7 +51,32 @@ ol, ul {
   font-size: 1.5rem;
 }
 .newsletter .content {
-  max-width: 600px;
+  max-width: 1000px;
+}
+.newsletter .form-control {
+  border-radius: 0;
+  border: 3px solid #2abbec;
+  background-color: transparent;
+  color: #fff;
+}
+.newsletter .form-control::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+}
+.newsletter .form-control:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+}
+.newsletter .form-control::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+}
+.newsletter .form-control:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}
+.newsletter .form-control:placeholder-shown {
+  color: #fff;
 }
 
 .banner {
@@ -100,7 +125,26 @@ footer .form-control {
   border: 3px solid #ffe587;
   border-radius: 0;
   background-color: transparent !important;
-  color: #fff !important;
+  color: #fff;
+}
+footer .form-control::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+}
+footer .form-control:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+}
+footer .form-control::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+}
+footer .form-control:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}
+footer .form-control:placeholder-shown {
+  color: #fff;
 }
 
 body {
@@ -121,15 +165,20 @@ a:hover {
   color: #000;
 }
 
+ol,
+ul {
+  list-style: none;
+}
+
 .form-group label.error {
   color: #da5d5d;
 }
 
 .form-control.error {
-  border-left: 3px solid #f00;
+  border-left: 3px solid #f00 !important;
 }
 .form-control.valid {
-  border-left: 3px solid #009200;
+  border-left: 3px solid #009200 !important;
 }
 
 /*# sourceMappingURL=main.css.map */

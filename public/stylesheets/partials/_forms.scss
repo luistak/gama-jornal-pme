@@ -7,10 +7,10 @@
 
 .form-control {
     &.error {
-        border-left: 3px solid $error;
+        border-left: 3px solid $error !important;
     }
     &.valid {
-        border-left: 3px solid $success;
+        border-left: 3px solid $success !important;
     }
     @extend .no-box-shadow;
 }
