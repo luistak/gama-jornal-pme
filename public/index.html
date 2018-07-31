@@ -1,99 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Jornal PME</title>
 
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jornal PME</title>
 
-		<!-- Favicon -->
-		<link rel="icon" href="img/favicon.png" />
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!-- Main CSS -->
-		<link rel="stylesheet" href="stylesheets/main.css?v=1">
+	<!-- Favicon -->
+	<link rel="icon" href="img/favicon.png" />
 
-		<title>Jornal pequenas e médias empresas</title>
-		<!-- update the version number as needed -->
-		<script defer src="/__/firebase/5.3.0/firebase-app.js"></script>
-		<!-- include only the Firebase features as you need -->
-		<script defer src="/__/firebase/5.3.0/firebase-auth.js"></script>
-		<script defer src="/__/firebase/5.3.0/firebase-database.js"></script>
-		<script defer src="/__/firebase/5.3.0/firebase-messaging.js"></script>
-		<script defer src="/__/firebase/5.3.0/firebase-storage.js"></script>
-		<!-- initialize the SDK after all desired features are loaded -->
-		<script defer src="/__/firebase/init.js"></script>
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="stylesheets/main.css?v=1">
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123043970-1"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+	<title>Jornal pequenas e médias empresas</title>
+	<!-- update the version number as needed -->
+	<script defer src="/__/firebase/5.3.0/firebase-app.js"></script>
+	<!-- include only the Firebase features as you need -->
+	<script defer src="/__/firebase/5.3.0/firebase-auth.js"></script>
+	<script defer src="/__/firebase/5.3.0/firebase-database.js"></script>
+	<script defer src="/__/firebase/5.3.0/firebase-messaging.js"></script>
+	<script defer src="/__/firebase/5.3.0/firebase-storage.js"></script>
+	<!-- initialize the SDK after all desired features are loaded -->
+	<script defer src="/__/firebase/init.js"></script>
 
-			gtag('config', 'UA-123043970-1');
-		</script>
-	</head>
-	<body>
-		<header>
-			<div class="container">
-				<div class="head flex-nowrap justify-content-between align-items-center p-3">
-					<div class="logo">
-						<a class="d-block" href="/"><img src="img/logo.png" class="img-fluid" alt="Logo Jornal PME"> </a>
-					</div>
-					<div class="justify-content-end align-items-center">
-						<form class="search" name="formsearch" action>
-							<input type="search" name="busca" id="busca" placeholder="Palavras-chave">
-							<a class="button mr-3" href="#">Pesquisar</a>
-						</form>
-					</div>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123043970-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-123043970-1');
+	</script>
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="head flex-nowrap justify-content-between align-items-center p-3">
+				<div class="logo">
+					<a class="d-block" href="/">
+						<img src="img/logo.png" class="img-fluid" alt="Logo Jornal PME"> </a>
+				</div>
+				<div class="justify-content-end align-items-center">
+					<form class="search" name="formsearch" action>
+						<input type="search" name="busca" id="busca" placeholder="Palavras-chave">
+						<a class="button mr-3" href="#">Pesquisar</a>
+					</form>
 				</div>
 			</div>
-		</header>
-		<section class="newsletter dark-blue-bg d-flex justify-content-center py-5">
-			<div class="d-flex justify-content-between align-items-center content">
-				<div class="text text-center">
-					<span>Assine nossa newsletter</span> para receber atualizações, artigos e dicas importantes
-				</div>
-				<button class="btn btn-primary btn-light" type="button" data-toggle="modal" data-target="#exampleModal">
-					Cadastrar
-				</button>
+		</div>
+	</header>
+	<section class="newsletter dark-blue-bg d-flex justify-content-center py-5">
+		<div class="d-flex justify-content-between align-items-center content">
+			<div class="text text-center">
+				<span>Assine nossa newsletter</span> para receber atualizações, artigos e dicas importantes
 			</div>
-		</section>
-		<main role="main" class="container">
-			<div class="full-banner">
-				<img src="img/banner.png" class="img-fluid" alt="Post: Eu essa semana">
-				<div>
-					<label>Título bacana</label>
-				</div>
+			<button class="btn btn-primary btn-light" type="button" data-toggle="modal" data-target="#exampleModal">
+				Cadastrar
+			</button>
+		</div>
+	</section>
+	<main role="main" class="container">
+		<div class="full-banner">
+			<img src="img/banner.png" class="img-fluid" alt="Post: Eu essa semana">
+			<div>
+				<label>Título bacana</label>
 			</div>
-			<div class="row">
-				<div class="col-md-8 blog-main">
-					<h3 class="pb-3 mb-4 font-italic border-bottom">
+		</div>
+		<div class="row">
+			<div class="col-md-8 blog-main">
+				<h3 class="pb-3 mb-4 font-italic border-bottom">
 					From the Firehose
-					</h3>
-		
-					<div class="blog-post">
+				</h3>
+
+				<div class="blog-post">
 					<h2 class="blog-post-title">Sample blog post</h2>
-					<p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
-		
-					<p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+					<p class="blog-post-meta">January 1, 2014 by
+						<a href="#">Mark</a>
+					</p>
+
+					<p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography,
+						images, and code are all supported.</p>
 					<hr>
-					<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+					<p>Cum sociis natoque penatibus et magnis
+						<a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+						vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
 					<blockquote>
-						<p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						<p>Curabitur blandit tempus porttitor.
+							<strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 					</blockquote>
-					<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+					<p>Etiam porta
+						<em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum
+						nulla sed consectetur.</p>
 					<h2>Heading</h2>
-					<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+					<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat
+						porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
 					<h3>Sub-heading</h3>
 					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 					<pre><code>Example code block</code></pre>
-					<p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+					<p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus
+						ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
 					<h3>Sub-heading</h3>
-					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla
+						sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+						condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 					<ul>
 						<li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
 						<li>Donec id elit non mi porta gravida at eget metus.</li>
@@ -106,82 +121,132 @@
 						<li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
 					</ol>
 					<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
-					</div><!-- /.blog-post -->
-		
-					<div class="blog-post">
+				</div>
+				<!-- /.blog-post -->
+
+				<div class="blog-post">
 					<h2 class="blog-post-title">Another blog post</h2>
-					<p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
-		
-					<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+					<p class="blog-post-meta">December 23, 2013 by
+						<a href="#">Jacob</a>
+					</p>
+
+					<p>Cum sociis natoque penatibus et magnis
+						<a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+						vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
 					<blockquote>
-						<p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						<p>Curabitur blandit tempus porttitor.
+							<strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 					</blockquote>
-					<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-					<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-					</div><!-- /.blog-post -->
-		
-					<div class="blog-post">
+					<p>Etiam porta
+						<em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum
+						nulla sed consectetur.</p>
+					<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat
+						porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+				</div>
+				<!-- /.blog-post -->
+
+				<div class="blog-post">
 					<h2 class="blog-post-title">New feature</h2>
-					<p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
-		
-					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+					<p class="blog-post-meta">December 14, 2013 by
+						<a href="#">Chris</a>
+					</p>
+
+					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla
+						sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+						condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 					<ul>
 						<li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
 						<li>Donec id elit non mi porta gravida at eget metus.</li>
 						<li>Nulla vitae elit libero, a pharetra augue.</li>
 					</ul>
-					<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+					<p>Etiam porta
+						<em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum
+						nulla sed consectetur.</p>
 					<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-					</div><!-- /.blog-post -->
-		
-					<nav class="blog-pagination">
+				</div>
+				<!-- /.blog-post -->
+
+				<nav class="blog-pagination">
 					<a class="btn btn-outline-primary" href="#">Older</a>
 					<a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-					</nav>
-				</div><!-- /.blog-main -->
-				<aside class="col-md-4 blog-sidebar">
-					<div class="p-3 mb-3 bg-light rounded">
+				</nav>
+			</div>
+			<!-- /.blog-main -->
+			<aside class="col-md-4 blog-sidebar">
+				<div class="p-3 mb-3 bg-light rounded">
 					<h4 class="font-italic">About</h4>
-					<p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-					</div>
-		
-					<div class="p-3">
+					<p class="mb-0">Etiam porta
+						<em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum
+						nulla sed consectetur.</p>
+				</div>
+
+				<div class="p-3">
 					<h4 class="font-italic">Archives</h4>
 					<ol class="list-unstyled mb-0">
-						<li><a href="#">March 2014</a></li>
-						<li><a href="#">February 2014</a></li>
-						<li><a href="#">January 2014</a></li>
-						<li><a href="#">December 2013</a></li>
-						<li><a href="#">November 2013</a></li>
-						<li><a href="#">October 2013</a></li>
-						<li><a href="#">September 2013</a></li>
-						<li><a href="#">August 2013</a></li>
-						<li><a href="#">July 2013</a></li>
-						<li><a href="#">June 2013</a></li>
-						<li><a href="#">May 2013</a></li>
-						<li><a href="#">April 2013</a></li>
+						<li>
+							<a href="#">March 2014</a>
+						</li>
+						<li>
+							<a href="#">February 2014</a>
+						</li>
+						<li>
+							<a href="#">January 2014</a>
+						</li>
+						<li>
+							<a href="#">December 2013</a>
+						</li>
+						<li>
+							<a href="#">November 2013</a>
+						</li>
+						<li>
+							<a href="#">October 2013</a>
+						</li>
+						<li>
+							<a href="#">September 2013</a>
+						</li>
+						<li>
+							<a href="#">August 2013</a>
+						</li>
+						<li>
+							<a href="#">July 2013</a>
+						</li>
+						<li>
+							<a href="#">June 2013</a>
+						</li>
+						<li>
+							<a href="#">May 2013</a>
+						</li>
+						<li>
+							<a href="#">April 2013</a>
+						</li>
 					</ol>
-					</div>
-		
-					<div class="p-3">
+				</div>
+
+				<div class="p-3">
 					<h4 class="font-italic">Elsewhere</h4>
 					<ol class="list-unstyled">
-						<li><a href="#">GitHub</a></li>
-						<li><a href="#">Twitter</a></li>
-						<li><a href="#">Facebook</a></li>
+						<li>
+							<a href="#">GitHub</a>
+						</li>
+						<li>
+							<a href="#">Twitter</a>
+						</li>
+						<li>
+							<a href="#">Facebook</a>
+						</li>
 					</ol>
-					</div>
-				</aside>
-			</div>
-		</main>
-		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
+				</div>
+			</aside>
+		</div>
+	</main>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="exampleModalLabel">Cadastro em newsletter</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
+						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="gama-form">
@@ -197,7 +262,8 @@
 							</div>
 							<div class="form-group">
 								<label for="email" class="required">Email</label>
-								<input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite aqui o seu email corporativo"  required>
+								<input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite aqui o seu email corporativo"
+								 required>
 							</div>
 						</div>
 						<div class="modal-footer">
@@ -206,28 +272,31 @@
 						</div>
 					</form>
 				</div>
-				</div>
 			</div>
 		</div>
-		<footer class="blog-footer mt-2">
-			<p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-			<p>
-				<a href="#">Back to top</a>
-			</p>
-		</footer>
-		<!-- Javascript -->
-			<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-			<!-- Optional JavaScript -->
-			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-			<script src="javascript/libs/jquery.min.js"></script>
-			<script src="javascript/libs/popper.min.js"></script>
-			<script src="javascript/libs/bootstrap.min.js"></script>
-			<script src="javascript/libs/moment.min.js"></script>
-			<script src="javascript/libs/jquery.validate.min.js"></script>
+	</div>
+	<footer class="blog-footer mt-2">
+		<p>Blog template built for
+			<a href="https://getbootstrap.com/">Bootstrap</a> by
+			<a href="https://twitter.com/mdo">@mdo</a>.</p>
+		<p>
+			<a href="#">Back to top</a>
+		</p>
+	</footer>
+	<!-- Javascript -->
+	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="javascript/libs/jquery.min.js"></script>
+	<script src="javascript/libs/popper.min.js"></script>
+	<script src="javascript/libs/bootstrap.min.js"></script>
+	<script src="javascript/libs/moment.min.js"></script>
+	<script src="javascript/libs/jquery.validate.min.js"></script>
 
-			<!-- Main Javascript -->
-			<script src="javascript/index.js"></script>
-			<script src="javascript/data.js"></script>
-		<!--/ Javascript -->
-	</body>
+	<!-- Main Javascript -->
+	<script src="javascript/index.js"></script>
+	<script src="javascript/data.js"></script>
+	<!--/ Javascript -->
+</body>
+
 </html>
