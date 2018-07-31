@@ -23,5 +23,12 @@
         background: rgba(0, 0, 0,0.5);
         color: #fff;
         font-size: 2rem;
+        @media (max-width: 991px) {
+            font-size: 1rem;
+        }
     }
+}
+
+.card-body {
+    background-color: $gray;
 }

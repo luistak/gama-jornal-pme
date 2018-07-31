@@ -44,10 +44,6 @@
 						<a class="d-block" href="/"><img src="img/logo.png" class="img-fluid" alt="Logo Jornal PME"> </a>
 					</div>
 					<div class="justify-content-end align-items-center">
-						<form class="search" name="formsearch" action>
-							<input type="search" name="busca" id="busca" placeholder="Palavras-chave">
-							<a class="button mr-3" href="#">Pesquisar</a>
-						</form>
 					</div>
 				</div>
 			</div>
@@ -66,64 +62,70 @@
 			<div class="banner pt-3">
 				<img src="img/banner.jpg" class="img-fluid" alt="Post: Eu essa semana">
 				<div class="ban-title">
-					<label>Ferramenta para melhorar a gestão de sua equipe</label>
+					<label>Ferramentas para melhorar a gestão de sua equipe</label>
 				</div>
 			</div>
 			<section class="posts">
 				<div class="row">
 					<div class="col-12 col-sm-6 col-md-4">
-						<div class="card my-4">
-							<img class="card-img-top" src="img/2.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Recomendações de leitura</h5>
-								<a href="#" class="btn btn-primary">Ver Mais</a>
+						<a href="#">
+							<div class="card my-4 no-border">
+								<img class="card-img-top" src="img/2.jpg" alt="Artigo: Nome do artigo">
+								<div class="card-body">
+									<h5 class="card-title">Recomendações de leitura</h5>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-12 col-sm-6 col-md-4">
-						<div class="card my-4">
-							<img class="card-img-top" src="img/7.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Usando cronogramas a seu favor</h5>
-								<a href="#" class="btn btn-primary">Ver Mais</a>
+						<a href="#">
+							<div class="card my-4 no-border">
+								<img class="card-img-top" src="img/7.jpg" alt="Artigo: Nome do artigo">
+								<div class="card-body">
+									<h5 class="card-title">Usando cronogramas a seu favor</h5>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-12 col-sm-6 col-md-4">
-						<div class="card my-4">
-							<img class="card-img-top" src="img/5.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Skills essenciais para a liderança</h5>
-								<a href="#" class="btn btn-primary">Ver Mais</a>
+						<a href="#">
+							<div class="card my-4 no-border">
+								<img class="card-img-top" src="img/5.jpg" alt="Artigo: Nome do artigo">
+								<div class="card-body">
+									<h5 class="card-title">Skills essenciais para a liderança</h5>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-12 col-sm-6 col-md-4">
-						<div class="card my-4">
-							<img class="card-img-top" src="img/4.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Colocanto as contas em dia</h5>
-								<a href="#" class="btn btn-primary">Ver Mais</a>
+						<a href="#">
+							<div class="card my-4 no-border">
+								<img class="card-img-top" src="img/4.jpg" alt="Artigo: Nome do artigo">
+								<div class="card-body">
+									<h5 class="card-title">Colocanto as contas em dia</h5>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-12 col-sm-6 col-md-4">
-						<div class="card my-4">
-							<img class="card-img-top" src="img/3.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Usando brainstorming eficiente</h5>
-								<a href="#" class="btn btn-primary">Ver Mais</a>
+						<a href="#">
+							<div class="card my-4 no-border">
+								<img class="card-img-top" src="img/3.jpg" alt="Artigo: Nome do artigo">
+								<div class="card-body">
+									<h5 class="card-title">Usando brainstorming eficiente</h5>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-12 col-sm-6 col-md-4">
-						<div class="card my-4">
-							<img class="card-img-top" src="img/6.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Como se organizar no trabalho</h5>
-								<a href="#" class="btn btn-primary">Ver mais</a>
+						<a href="#">
+							<div class="card my-4 no-border">
+								<img class="card-img-top" src="img/6.jpg" alt="Artigo: Nome do artigo">
+								<div class="card-body">
+									<h5 class="card-title">Como se organizar no trabalho</h5>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			</section>
@@ -139,15 +141,15 @@
 					</button>
 				</div>
 				<div class="gama-form">
-					<form data-gama-form>
+					<form data-gama-modal-form>
 						<div class="modal-body">
 							<div class="form-group">
-								<label for="cargo" class="required">Cargo</label>
-								<input type="text" class="form-control" id="cargo" placeholder="cargo" name="cargo" required>
+								<label for="nome" class="required">Nome</label>
+								<input type="text" class="form-control" id="nome" placeholder="Nome e sobrenome" name="nome" required>
 							</div>
 							<div class="form-group">
-								<label for="nome" class="required">Nome</label>
-								<input type="text" class="form-control" id="nome" placeholder="Nome" name="nome" required>
+								<label for="empresa" class="required">Empresa</label>
+								<input type="text" class="form-control" id="empresa" placeholder="empresa" name="empresa" required>
 							</div>
 							<div class="form-group">
 								<label for="email" class="required">Email</label>
@@ -155,7 +157,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Não quero receber um conteúdo incrível</button>
+							<a data-dismiss="modal">Não quero receber um conteúdo incrível</a>
 							<button type="submit" class="btn btn-primary">Cadastrar</button>
 						</div>
 					</form>
@@ -164,7 +166,28 @@
 			</div>
 		</div>
 		<footer class="mt-2 dark-blue-bg">
-			<p>Copyright © JornalPME.com.br</p>
+			<div class="d-flex justify-content-between align-items-center content py-4">
+				<img src="img/paper-plane.png" alt="Cadastre e receba um eook">
+				<div class="text text-center">
+					Aproveite! Faça o cadastro e receba de graça o ebook sobre gestão
+				</div>
+				<div>
+					<form data-gama-form>
+							<div class="form-group">
+								<input type="text" class="form-control" id="nome" placeholder="Nome e sobrenome" name="nome" required>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="empresa" placeholder="empresa" name="empresa" required>
+							</div>
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite aqui o seu email corporativo"  required>
+							</div>
+							<button type="submit" class="btn btn-gold no-border">Cadastrar</button>
+					</form>
+				</div>
+			</div>
+			<p class="light-blue-text">Respeitamos sua privacidade. Você não receberá spams!</p>
+			<p class="pt-5">Copyright © JornalPME.com.br</p>
 		</footer>
 		<!-- Javascript -->
 			<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>

@@ -8,6 +8,14 @@
     box-shadow: none !important;
 }
 
+.no-border {
+    border: none !important;
+}
+
+.light-blue-text {
+    color: $light-blue-font-color;
+}
+
 %responsive-flex {
     @media (max-width: 991px) {
         flex-direction: column;

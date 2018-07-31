@@ -8,8 +8,16 @@
   box-shadow: none !important;
 }
 
+.no-border, .btn-gold {
+  border: none !important;
+}
+
+.light-blue-text {
+  color: #549cb4;
+}
+
 @media (max-width: 991px) {
-  header .head, .newsletter .content {
+  footer .content, header .head, .newsletter .content {
     flex-direction: column;
   }
 }
@@ -25,6 +33,11 @@
 }
 .btn-light :hover {
   background-color: #18a8de;
+}
+
+.btn-gold {
+  color: #fff;
+  background-color: #ffe587 !important;
 }
 
 .newsletter .text {
@@ -50,6 +63,15 @@
   color: #fff;
   font-size: 2rem;
 }
+@media (max-width: 991px) {
+  .banner .ban-title {
+    font-size: 1rem;
+  }
+}
+
+.card-body {
+  background-color: #f2f2f2;
+}
 
 header {
   background-color: #fff;
@@ -66,6 +88,16 @@ footer {
   padding: 2.7rem 0;
   text-align: center;
 }
+footer .content {
+  margin: auto;
+  max-width: 800px;
+}
+footer .form-control {
+  border: 3px solid #ffe587;
+  border-radius: 0;
+  background-color: transparent !important;
+  color: #fff !important;
+}
 
 body {
   height: 100%;
@@ -77,8 +109,16 @@ main {
   background-color: #fff;
 }
 
+a {
+  color: #000;
+  margin: 0 auto;
+}
+a:hover {
+  color: #000;
+}
+
 .form-group label.error {
-  color: #ff0000b3;
+  color: #da5d5d;
 }
 
 .form-control.error {

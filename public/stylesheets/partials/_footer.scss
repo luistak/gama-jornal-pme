@@ -1,4 +1,15 @@
 footer {
     padding: 2.7rem 0;
     text-align: center;
+    .content {
+        margin: auto;
+        max-width: 800px;
+        @extend %responsive-flex;
+    }
+    .form-control {
+        border: 3px solid $gold;
+        border-radius: 0;
+        background-color: transparent !important;
+        color: #fff !important;
+    }
 }
