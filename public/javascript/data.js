@@ -97,6 +97,7 @@ gamaData.formListener = function () {
                 // Success
                 console.log('Inseriu no banco com sucesso')
                 alert('Inscrito com sucesso na newsletter! Yay o/');
+                window.location.href = 'includes/ebook.pdf';
 
                 gama.closeModal();
                 $(this).off('push-response');
