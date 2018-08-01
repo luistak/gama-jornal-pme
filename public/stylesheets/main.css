@@ -239,4 +239,8 @@ ul {
   letter-spacing: -1px;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=main.css.map */
