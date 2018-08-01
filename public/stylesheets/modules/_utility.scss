@@ -4,6 +4,11 @@
     background-color: $dark-color;
 }
 
+.white-bg {
+    background-color: $light-font-color;
+    color: $font-color;
+}
+
 .no-box-shadow {
     box-shadow: none !important;
 }
