@@ -37,6 +37,9 @@
             font-size: 1rem;
         }
     }
+    @media (max-width: 991px) {
+        height: 350px;
+    }
 }
 
 .card-body {
