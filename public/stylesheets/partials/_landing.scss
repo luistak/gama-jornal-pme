@@ -1,0 +1,13 @@
+.landing {
+    .content {
+        @extend %responsive-flex;
+    }
+}
+
+.landing-form {
+    background-color: $gray;
+    border-radius: 25px;
+    .head {
+        border-radius: 25px 25px 0px 0px;
+    }
+}
