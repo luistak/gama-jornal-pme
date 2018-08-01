@@ -12,7 +12,7 @@
 	<link rel="icon" href="../../img/favicon.png" />
 
 	<!-- Main CSS -->
-	<link rel="stylesheet" href="../../stylesheets/main.css?v=1244124567761234">
+	<link rel="stylesheet" href="../../stylesheets/main.css?v=5743">
 
 	<!-- Open graph -->
 	<meta property="og:site_name" content="Jornal PME">
@@ -140,7 +140,41 @@
 			</section>
 		</div>
 	</main>
-
+	<!-- Modal -->
+	<div class="modal fade" id="leaveModal" tabindex="-1" role="dialog" aria-labelledby="leaveModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="leaveModalLabel">Oops, antes de sair que tal se cadastrar em nossa newsletter?</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="gama-form">
+				<form data-gama-modal-form>
+					<div class="modal-body">
+						<div class="form-group">
+							<label for="nome" class="required">Nome completo</label>
+							<input type="text" class="form-control" id="nome" placeholder="Nome e sobrenome" name="nome" required>
+						</div>
+						<div class="form-group">
+							<label for="empresa" class="required">Empresa</label>
+							<input type="text" class="form-control" id="empresa" placeholder="empresa" name="empresa" required>
+						</div>
+						<div class="form-group">
+							<label for="email" class="required">Email</label>
+							<input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite aqui o seu email corporativo"  required>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a data-dismiss="modal">Não quero receber um conteúdo incrível</a>
+						<button type="submit" class="btn btn-primary">Cadastrar</button>
+					</div>
+				</form>
+			</div>
+			</div>
+		</div>
+	</div>
 	<footer class="mt-2 dark-blue-bg">
 		<div class="d-flex justify-content-between align-items-center content py-4">
 			<img src="../../img/paper-plane.png" alt="Cadastre e receba um eook">
