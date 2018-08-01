@@ -2,12 +2,30 @@
     .content {
         @extend %responsive-flex;
     }
+    .description {
+        max-width: 495px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        ul {
+            padding: 0;
+        }
+        li::before {
+            content: "•   ";
+            color: $gold;
+            font-size: 2rem;
+        }
+    }
 }
 
 .landing-form {
-    background-color: $gray;
+    max-width: 400px;
     border-radius: 25px;
+    background-color: $gray;
     .head {
         border-radius: 25px 25px 0px 0px;
     }
+}
+
+.landing-title {
+    max-width: 600px;
 }

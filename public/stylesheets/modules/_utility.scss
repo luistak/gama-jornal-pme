@@ -4,6 +4,11 @@
     background-color: $dark-color;
 }
 
+.white-bg {
+    background-color: $light-font-color;
+    color: $font-color;
+}
+
 .no-box-shadow {
     box-shadow: none !important;
 }
@@ -18,6 +23,10 @@
 
 .light-blue-text {
     color: $light-blue-font-color;
+}
+
+.hide {
+    display: none;
 }
 
 %responsive-flex {
