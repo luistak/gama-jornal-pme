@@ -79,6 +79,14 @@ gama.getBaseUrl = function () {
 	return window.location.protocol + "//" + window.location.host;
 }
 
+gama.leaveModalListener = function () {
+    $('body').on('mouseleave', function (e) {
+        $('#leaveModal').modal('show');
+        $(this).off('mouseleave');
+    });
+}
+
 $(function() {
     gama.setUserIp();
+    gama.leaveModalListener();
 });
