@@ -21,7 +21,7 @@
 }
 
 @media (max-width: 991px) {
-  footer .content, header .head, .newsletter form, .newsletter .content {
+  .landing .content, footer .content, header .head, .newsletter form, .newsletter .content {
     flex-direction: column;
   }
 }
@@ -113,6 +113,10 @@ header .head {
   display: flex;
 }
 
+header-lp {
+  height: 140px;
+}
+
 footer {
   padding: 2.7rem 0;
   text-align: center;
@@ -179,6 +183,14 @@ ul {
 }
 .form-control.valid {
   border-left: 3px solid #009200 !important;
+}
+
+.landing-form {
+  background-color: #f2f2f2;
+  border-radius: 25px;
+}
+.landing-form .head {
+  border-radius: 25px 25px 0px 0px;
 }
 
 /*# sourceMappingURL=main.css.map */
