@@ -132,19 +132,6 @@ header-lp {
   height: 140px;
 }
 
-.testimony img {
-float: left;
-width: 80px;
-height: 80px;
-border-radius: 50%;
-margin: 10px; 
-}
-
-.testimony p {
-  font-size: 0.7em;
-  letter-spacing: -1px;
-}
-
 footer {
   padding: 2.7rem 0;
   text-align: center;
@@ -238,6 +225,18 @@ ul {
 
 .landing-title {
   max-width: 600px;
+}
+
+.testimony img {
+  float: left;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.testimony p {
+  font-size: 0.7em;
+  letter-spacing: -1px;
 }
 
 /*# sourceMappingURL=main.css.map */

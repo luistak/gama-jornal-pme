@@ -29,3 +29,17 @@
 .landing-title {
     max-width: 600px;
 }
+
+.testimony {
+    img {
+        float: left; 
+        width: 80px; 
+        height: 80px; 
+        border-radius: 50%; 
+        margin: 10px;  
+    }
+    p {
+        font-size: 0.7em; 
+        letter-spacing: -1px; 
+    }
+}
