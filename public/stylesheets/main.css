@@ -81,6 +81,12 @@
 
 .banner {
   position: relative;
+  height: 500px;
+  background-image: url("../../img/parallax.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .banner .ban-title {
   position: absolute;
@@ -95,6 +101,11 @@
 @media (max-width: 991px) {
   .banner .ban-title {
     font-size: 1rem;
+  }
+}
+@media (max-width: 991px) {
+  .banner {
+    height: 350px;
   }
 }
 
