@@ -20,6 +20,10 @@
     color: $light-blue-font-color;
 }
 
+.hide {
+    display: none;
+}
+
 %responsive-flex {
     @media (max-width: 991px) {
         flex-direction: column;

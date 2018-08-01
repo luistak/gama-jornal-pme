@@ -122,6 +122,7 @@ gamaData.indexFormsListeners = function () {
 		event.preventDefault();
 		var formData = $(this).serializeArray();
 		var nome, empresa, email;
+		var downloadFile = $(this).attr('data-gama-download');
 
 		formData.forEach(function (data) {
 			if (data.name == 'nome') {
@@ -139,6 +140,10 @@ gamaData.indexFormsListeners = function () {
 		$(document).on('push-response', function (response) {
 			if (response) {
 				// Success
+				var link = downloadFile || '/includes/ebook.pdf';
+				link = gama.getBaseUrl() + link
+				gama.redirect(link);
+
 				gama.closeModal();
 				$('form').trigger('reset');
 				$(this).off('push-response');
@@ -179,6 +184,51 @@ gamaData.indexFormsListeners = function () {
 		$(document).on('push-response', function (response) {
 			if (response) {
 				// Success
+				gama.closeModal();
+				$('form').trigger('reset');
+				$(this).off('push-response');
+				alert('Você foi inscrito com sucesso!');
+			} else {
+				// Error
+				gama.closeModal();
+				$('form').trigger('reset');
+				$(this).off('push-response');
+				alert('Oops, houve algum erro, por favor tente mais tarde :(');
+			}
+		});
+	});
+
+	// Landing form
+	var landingSelector = '[data-gama-landing-form]';
+	var landingForm = $(landingSelector);
+	landingForm.validate(gamaData.leadFormOptions);
+
+	$(document).on('submit', landingSelector, function (event) {
+		event.preventDefault();
+		var formData = $(this).serializeArray();
+		var nome, empresa, email;
+		var downloadFile = $(this).attr('data-gama-download');
+
+		formData.forEach(function (data) {
+			if (data.name == 'nome') {
+				nome = data.value;
+			} else if (data.name == 'empresa') {
+				empresa = data.value;
+			} else if (data.name == 'email') {
+				email = data.value;
+			}
+		});
+
+		var Lead = gamaData.formatLead(nome, empresa, email);
+		gamaData.pushLead(Lead);
+
+		$(document).on('push-response', function (response) {
+			if (response) {
+				// Success
+				var link = downloadFile || '/includes/ebook.pdf';
+				link = gama.getBaseUrl() + link
+				gama.redirect(link);
+
 				gama.closeModal();
 				$('form').trigger('reset');
 				$(this).off('push-response');
