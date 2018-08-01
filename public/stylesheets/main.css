@@ -97,6 +97,11 @@
     font-size: 1rem;
   }
 }
+@media (max-width: 991px) {
+  .banner {
+    height: 350px;
+  }
+}
 
 .card-body {
   background-color: #f2f2f2;
