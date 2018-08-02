@@ -1,5 +1,5 @@
 # Gama Academy Jornal PME
-## A ssignment #2: Show me the leads! 
+## Assignment #2: Show me the leads! 
 
 ### Instalando o git e gitkraken em sua máquina:**
 **Instalando Git**
