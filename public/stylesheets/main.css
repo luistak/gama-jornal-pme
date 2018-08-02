@@ -117,6 +117,35 @@
   background-color: #f2f2f2;
 }
 
+.card .img-holder {
+  max-height: 260px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.card .img-holder::after {
+  content: "";
+  position: absolute;
+  opacity: 0.095;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: transparent;
+  transition: all 0.8s ease-in-out 0s;
+}
+.card img {
+  transition: all 0.8s ease-in-out 0s;
+}
+.card:hover .img-holder::after {
+  background-color: #18a8de;
+}
+.card:hover img {
+  -ms-transform: rotate(2deg) scale(1.05);
+  -webkit-transform: rotate(2deg) scale(1.05);
+  transform: rotate(2deg) scale(1.05);
+}
+
 header {
   background-color: #fff;
   min-height: 100px;
