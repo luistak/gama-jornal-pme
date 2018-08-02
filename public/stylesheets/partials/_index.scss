@@ -78,3 +78,13 @@
         }
     }
 }
+
+.fixed-lp {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    img {
+        max-width: 50px;
+        display: block;
+    }
+}

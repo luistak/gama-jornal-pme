@@ -89,4 +89,5 @@ gama.leaveModalListener = function () {
 $(function() {
     gama.setUserIp();
     gama.leaveModalListener();
+    $('[data-toggle="tooltip"]').tooltip();
 });

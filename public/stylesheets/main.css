@@ -146,6 +146,16 @@
   transform: rotate(2deg) scale(1.05);
 }
 
+.fixed-lp {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+}
+.fixed-lp img {
+  max-width: 50px;
+  display: block;
+}
+
 header {
   background-color: #fff;
   min-height: 100px;
