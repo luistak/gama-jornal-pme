@@ -11,6 +11,8 @@ gamaData.firebaseConfig = {
 	messagingSenderId: "961147787327"
 };
 gamaData.database = null;
+gamaData.leads = null;
+gamaData.leadsArray = [];
 gamaData.leadCollection = 'jinchuuriki/kurama/leads';
 gamaData.leadFormOptions = {
 	rules: {
@@ -48,12 +50,13 @@ gamaData.leadFormOptions = {
 };
 
 gamaData.initialize = function() {
-	$(document).on('ip-loaded', function () {
-		gamaData.initializeApp();
-		gamaData.setCustomValidation();
-		gamaData.indexFormsListeners();
-		gamaData.databaseSetup();
-	});
+	gamaData.initializeApp();
+	gamaData.setCustomValidation();
+	gamaData.indexFormsListeners();
+	gamaData.databaseSetup();
+	// $(document).on('ip-loaded', function () {
+	// });
+	gamaData.leadsListener();
 }
 
 gamaData.initializeApp = function () {
@@ -285,6 +288,43 @@ gamaData.pushLead = function (lead) {
 		.catch(function(error) {
 			$(document).trigger('push-response', false);
 		});
+}
+
+gamaData.getLeadsData = function () {
+	gamaData.database.ref(gamaData.leadCollection)
+		.once('value')
+		.then(function(response) {
+			gamaData.leads = response.toJSON();
+			$(document).trigger('leads-received');
+		})
+		.catch(function(error) {
+			console.error(error);
+		});
+}
+
+gamaData.leadsListener = function () {
+	$(document).on('leads-received', function() {
+		gamaData.leadsArray = [];
+		Object.keys(gamaData.leads).forEach(function(key) {
+			gamaData.leadsArray.push(gamaData.leads[key]);
+		});
+		$(document).trigger('leads-formatted');
+	});
+
+	$(document).on('leads-formatted', function () {
+		var csv = gama.jsonToCsv(gamaData.leadsArray);
+
+		var downloadLink = document.createElement("a");
+		var blob = new Blob(["\ufeff", csv]);
+		var url = URL.createObjectURL(blob);
+
+		downloadLink.href = url;
+		downloadLink.download = "data.csv";
+
+		document.body.appendChild(downloadLink);
+		downloadLink.click();
+		document.body.removeChild(downloadLink);
+	})
 }
 
 $(function() {
